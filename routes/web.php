@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/', 'ContactController@index')->name('top');   /* 入力ページ */
+Route::post('contact/confirm', 'ContactController@confirm') ->name('contact.confirm');   /* 確認ページ */
+Route::post('contact/complete', 'ContactController@complete') ->name('contact.complete');   /* 送信完了ページ */
+
