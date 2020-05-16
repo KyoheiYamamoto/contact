@@ -31,6 +31,12 @@
                         {!! Form::email('email', null, ['class' => 'form-control']) !!}
                     </div>
                 </div>
+                <div class="row form-group">
+                    {!! Form::label('tel', '電話番号:', ['class' => 'col']) !!}
+                    <div class="col-12">
+                        {!! Form::text('tel', null, ['class' => 'form-control']) !!}
+                    </div>
+                </div>
 
                 <div class="row form-group">
                     {!! Form::label('sub', '件名）:', ['class' => 'col']) !!}

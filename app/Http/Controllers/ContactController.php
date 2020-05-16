@@ -20,6 +20,7 @@ class ContactController extends Controller
             'email' => 'required|string|email|max:191',
             'body'  => 'required|string|max:1000',
             'sub' => 'required|string|max:100',
+            'tel' => 'required|string|max:100',
         ]);
 
         //フォームから受け取ったすべてのinputの値を取得
@@ -49,6 +50,7 @@ class ContactController extends Controller
             'from_name' => 'Kyohei Yamamoto',  //自分のGmailの表示名
             'subject' => 'お問い合わせ受付完了のお知らせ',  //メールの件名
             'sub' => $request->sub,//所属・団体名
+            'tel' => $request->tel,//所属・団体名
             'body' => $request->body  //お問い合わせ内容
         ], 'to'));  //to.blade.phpに反映する
 
@@ -60,6 +62,7 @@ class ContactController extends Controller
             'from_name' => $request->name, //お客様がフォームに入力した名前
             'subject' => 'お客様からのお問い合わせ',  //メールの件名
             'sub' => $request->sub,//所属・団体名
+            'tel' => $request->tel,//所属・団体名
             'body' => $request->body
         ], 'from'));  //from.blade.phpに反映する
         return view('contact.complete');

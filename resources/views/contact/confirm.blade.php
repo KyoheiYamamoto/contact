@@ -32,11 +32,18 @@
                     </div>
                 </div>
                 <div class="row form-group">
+                    {!! Form::label('tel', '電話番号 :', ['class' => 'col']) !!}
+                    <div class="col-12">
+                        {!! Form::email('tel', $inputs['tel'], ['class' => 'form-control col-sm-12','readonly']) !!}
+                    </div>
+                </div>
+                <div class="row form-group">
                     {!! Form::label('sub', '件名 :', ['class' => 'col']) !!}
                     <div class="col-12">
                         {!! Form::text('sub', $inputs['sub'], ['class' => 'form-control col-sm-12','readonly']) !!}
                     </div>
                 </div>
+
                 <div class="row form-group">
                     {!! Form::label('body', '内容 :', ['class' => 'col']) !!}
                     <div class="col-12">
