@@ -9,7 +9,6 @@
     @endforeach
 </ul>
 @endif
-
 {{-- 本体 --}}
 <div class="container my-4">
     <div class="row justify-content-center">

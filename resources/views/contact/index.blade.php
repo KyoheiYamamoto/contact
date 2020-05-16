@@ -1,24 +1,31 @@
 @extends('layout')
 @section('content')
 
-{{-- エラーメッセージ --}}
-@if (count($errors) > 0)
-<ul class="alert alert-danger" role="alert">
-    @foreach ($errors->all() as $error)
-    <li class="ml-4">{{ $error }}</li>
-    @endforeach
-</ul>
-@endif
-
 {{-- 本体 --}}
 <div class="container my-4">
     <div class="row justify-content-center">
         <div class="col-12 col-sm-8">
-            <h1>お問い合わせ</h1>
-            <p class="pl-2">お問い合わせ内容をご入力ください。</p>
-
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">お問い合わせ</h4>
+                    <p class="card-text">
+                        ※twitterのDMの方が見るのは早いです
+                    </p>
+                    <a href="https://twitter.com/davidkyohei" class="card-link">twitter</a>
+                </div>
+            </div>
+            {{-- エラーメッセージ --}}
+            @if (count($errors) > 0)
+            <div class="my-4">
+            <ul class="alert alert-danger" role="alert">
+                @foreach ($errors->all() as $error)
+                <li class="ml-4">{{ $error }}</li>
+                @endforeach
+            </ul>
+            </div>
+            @endif
             {{ Form::open(['route' => 'contact.confirm']) }}
-            <div class="container">
+            <div class="container my-4">
                 <div class="row form-group">
                     {!! Form::label('name', 'お名前:', ['class' => 'col']) !!}
                     <div class="col-12">
