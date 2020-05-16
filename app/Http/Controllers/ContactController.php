@@ -19,6 +19,7 @@ class ContactController extends Controller
             'name' => 'required|string|max:191',
             'email' => 'required|string|email|max:191',
             'body'  => 'required|string|max:400',
+            // 'job' => 'required|string|max:191',
         ]);
 
         //フォームから受け取ったすべてのinputの値を取得
@@ -44,19 +45,21 @@ class ContactController extends Controller
         \Mail::send(new \App\Mail\ContactMail([
             'to' => $request->email,  //お客様がフォームに入力したメールアドレス
             'to_name' => $request->name,  //お客様がフォームに入力した名前
-            'from' => 'hoge@gmail.com',  //自分のGmailアドレス
-            'from_name' => 'Hoge',  //自分のGmailの表示名
+            'from' => 'arienkyohei@gmail.com',  //自分のGmailアドレス
+            'from_name' => 'Kyohei Yamamoto',  //自分のGmailの表示名
             'subject' => 'お問い合わせ受付完了のお知らせ',  //メールの件名
+            // 'job' => $request->job,//所属・団体名
             'body' => $request->body  //お問い合わせ内容
         ], 'to'));  //to.blade.phpに反映する
 
         // 自分に送るメール
         \Mail::send(new \App\Mail\ContactMail([
-            'to' => 'hoge@gmail.com',  //自分のGmailアドレス
-            'to_name' => 'Hoge',  //自分のGmailの表示名
+            'to' => 'arienkyohei@gmail.com',  //自分のGmailアドレス
+            'to_name' => 'kyohei',  //自分のGmailの表示名
             'from' => $request->email,  //お客様がフォームに入力したメールアドレス
             'from_name' => $request->name, //お客様がフォームに入力した名前
             'subject' => 'お客様からのお問い合わせ',  //メールの件名
+            // 'job' => $request->job,//所属・団体名
             'body' => $request->body
         ], 'from'));  //from.blade.phpに反映する
         return view('contact.complete');

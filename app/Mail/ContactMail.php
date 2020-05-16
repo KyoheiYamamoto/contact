@@ -21,6 +21,8 @@ class ContactMail extends Mailable
     {
         return $this->view('contact.emails.'.$this->viewStr)
             ->to($this->content['to'], $this->content['to_name'])
+            // ->to($this->content['tel'], $this->content['tel'])
+            // ->to($this->content['job'])
             ->from($this->content['from'], $this->content['from_name'])
             ->subject($this->content['subject'])
             ->with([

@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 {{-- 本体 --}}
-<div class="container">
+<div class="container my-4">
     <div class="row justify-content-center">
         <div class="col-12 col-sm-8">
             <h1>送信完了</h1>

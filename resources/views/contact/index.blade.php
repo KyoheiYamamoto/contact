@@ -11,7 +11,7 @@
 @endif
 
 {{-- 本体 --}}
-<div class="container">
+<div class="container my-4">
     <div class="row justify-content-center">
         <div class="col-12 col-sm-8">
             <h1>お問い合わせ</h1>
@@ -31,6 +31,18 @@
                         {!! Form::email('email', null, ['class' => 'form-control']) !!}
                     </div>
                 </div>
+                <!-- <div class="row form-group">
+                    {!! Form::label('tel', '電話番号 :', ['class' => 'col']) !!}
+                    <div class="col-12">
+                        {!! Form::text('tel', null, ['class' => 'form-control']) !!}
+                    </div>
+                </div> -->
+                <!-- <div class="row form-group">
+                    {!! Form::label('job', '所属・団体名（ない方はなしと答えてください）:', ['class' => 'col']) !!}
+                    <div class="col-12">
+                        {!! Form::text('job', null, ['class' => 'form-control']) !!}
+                    </div>
+                </div> -->
                 <div class="row form-group">
                     {!! Form::label('body', '内容 :', ['class' => 'col']) !!}
                     <div class="col-12">
