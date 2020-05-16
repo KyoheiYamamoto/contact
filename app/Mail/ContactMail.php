@@ -24,7 +24,7 @@ class ContactMail extends Mailable
             // ->to($this->content['tel'], $this->content['tel'])
             // ->to($this->content['job'])
             ->from($this->content['from'], $this->content['from_name'])
-            ->subject($this->content['subject'])
+            ->subject($this->content['subject'],$this->content['sub'])
             ->with([
                 'content' => $this->content,
             ]);

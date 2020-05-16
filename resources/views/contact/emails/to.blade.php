@@ -9,7 +9,9 @@
 <br>
 お客様のメールアドレス：{{ $content['to'] }} <br>
 <br>
-お問い合わせ内容：<br>
+件名：{{ $content['sub'] }} <br>
+<br>
+お問い合わせ内容：
 <?php echo nl2br(htmlspecialchars($content['body'])); ?><br>
 <br>
 ============================<br>

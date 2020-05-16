@@ -31,18 +31,12 @@
                         {!! Form::email('email', $inputs['email'], ['class' => 'form-control col-sm-12','readonly']) !!}
                     </div>
                 </div>
-                <!-- <div class="row form-group">
-                    {!! Form::label('phone', '電話番号 :', ['class' => 'col']) !!}
+                <div class="row form-group">
+                    {!! Form::label('sub', '件名 :', ['class' => 'col']) !!}
                     <div class="col-12">
-                        {!! Form::text('tel', $inputs['name'], ['class' => 'form-control col-sm-12','readonly']) !!}
+                        {!! Form::text('sub', $inputs['sub'], ['class' => 'form-control col-sm-12','readonly']) !!}
                     </div>
-                </div> -->
-                <!-- <div class="row form-group">
-                    {!! Form::label('job', '所属・団体名（ない方はなしと答えてください） :', ['class' => 'col']) !!}
-                    <div class="col-12">
-                        {!! Form::text('job', $inputs['name'], ['class' => 'form-control col-sm-12','readonly']) !!}
-                    </div>
-                </div> -->
+                </div>
                 <div class="row form-group">
                     {!! Form::label('body', '内容 :', ['class' => 'col']) !!}
                     <div class="col-12">
