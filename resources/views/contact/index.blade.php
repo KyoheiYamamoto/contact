@@ -46,13 +46,13 @@
                 </div>
 
                 <div class="row form-group">
-                    {!! Form::label('sub', '件名）:', ['class' => 'col']) !!}
+                    {!! Form::label('sub', '件名:', ['class' => 'col']) !!}
                     <div class="col-12">
                         {!! Form::text('sub', null, ['class' => 'form-control']) !!}
                     </div>
                 </div>
                 <div class="row form-group">
-                    {!! Form::label('body', '内容 :', ['class' => 'col']) !!}
+                    {!! Form::label('body', 'お問い合わせ内容 :', ['class' => 'col']) !!}
                     <div class="col-12">
                         {!! Form::textarea('body', null, ['class' => 'form-control', 'rows' => '6']) !!}
                     </div>

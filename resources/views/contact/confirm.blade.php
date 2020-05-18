@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="row form-group">
-                    {!! Form::label('body', '内容 :', ['class' => 'col']) !!}
+                    {!! Form::label('body', 'お問い合わせ内容 :', ['class' => 'col']) !!}
                     <div class="col-12">
                         {!! Form::textarea('body', $inputs['body'], ['class' => 'form-control col-sm-12','readonly', 'rows' => '6']) !!}
                     </div>
