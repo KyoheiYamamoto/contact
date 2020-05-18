@@ -18,9 +18,9 @@ class ContactController extends Controller
         $request->validate([
             'name' => 'required|string|max:191',
             'email' => 'required|string|email|max:191',
-            'body'  => 'required|string|max:1000',
-            'sub' => 'required|string|max:100',
             'tel' => 'required|string|max:100',
+            'sub' => 'required|string|max:100',
+            'body'  => 'required|string|max:1000',
         ]);
 
         //フォームから受け取ったすべてのinputの値を取得
@@ -40,7 +40,7 @@ class ContactController extends Controller
             return redirect()->route('contact.index')->withInput($input);
         }
         // 二重送信防止のためトークンを発行
-       $request->session()->regenerateToken();
+        $request->session()->regenerateToken();
 
         // お客様に送るメール
         \Mail::send(new \App\Mail\ContactMail([
@@ -66,6 +66,5 @@ class ContactController extends Controller
             'body' => $request->body
         ], 'from'));  //from.blade.phpに反映する
         return view('contact.complete');
-
     }
 }
