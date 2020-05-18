@@ -10,11 +10,11 @@
 </ul>
 @endif
 {{-- 本体 --}}
-<div class="container my-4">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-sm-8">
-            <h1>お問い合わせ内容の確認</h1>
-            <p class="pl-2">この内容でよろしければ「送信する」ボタンを押してください。</p>
+            <h2 class="my-4 pl-3">お問い合わせ内容の確認</h2>
+            <p class="text-danger pl-3">※この内容でよろしければ「送信する」ボタンを押してください。</p>
 
             {{ Form::open(['route' => 'contact.complete']) }}
             <div class="container">

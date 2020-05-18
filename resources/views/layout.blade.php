@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hacksレビュー</title>
+    <title>Contact</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,9 +12,9 @@
     />
   </head>
   <body>
-      <header class="navbar navbar-light bg-light">
+      <header class="navbar navbar-light" style="background-color: #e3f2fd;">
         <div class="container">
-          <a class="navbar-brand" href="{{route('top')}}">Hacksレビュー</a>
+          <a class="navbar-brand" href="{{route('top')}}">お問い合わせ</a>
         </div>
       </header>
 
