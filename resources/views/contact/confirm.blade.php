@@ -52,18 +52,15 @@
             </div>
             <div class="container">
                 <div class="row  justify-content-center">
-                    <div class="col-sm-6 mt-3">
+                    <div class="col-sm-6 my-4">
                         {!! Form::submit('送信する', ['name' => 'action', 'class' => 'btn btn-warning btn-block']) !!}
                     </div>
-                </div>
-                <div class="row  justify-content-center">
-                    <div class="col-sm-6 mt-3">
+                    <div class="col-sm-6 my-4">
                         {!! Form::submit('修正する', ['name' => 'action', 'class' => 'btn btn-secondary btn-block']) !!}
                     </div>
                 </div>
             </div>
             {{ Form::close() }}
-
         </div>
     </div>
 </div>
