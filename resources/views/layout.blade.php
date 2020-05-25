@@ -13,8 +13,8 @@
   </head>
   <body>
       <header class="navbar navbar-light" style="background-color: #e3f2fd;">
-        <div class="container">
-          <a class="navbar-brand" href="{{route('top')}}">お問い合わせ</a>
+        <div class="container mr-4">
+          <a class="navbar-brand mr-4" href="{{route('top')}}">お問い合わせフォーム</a>
         </div>
       </header>
 

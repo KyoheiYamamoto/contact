@@ -9,6 +9,10 @@
                 <div class="card-body">
                     <h4 class="card-title">お問い合わせ</h4>
                     <p class="card-text">
+                        直接メールする方はこちらまで<br>
+                        arienkyohei@gmail.com
+                    </p>
+                    <p class="card-text">
                         ※twitterのDMの方が見るのは早いです
                     </p>
                     <a href="https://twitter.com/davidkyohei" class="card-link">twitter</a>
